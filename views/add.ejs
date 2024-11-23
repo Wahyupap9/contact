@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/css/style-add.css" />
+<div class="container-form">
+  <form action="/contact/add" method="post">
+    <% if (typeof result != 'undefined') { %>
+    <div class="error-container">
+      <ul>
+        <%result.forEach(error => {%>
+        <li><%- error.msg %></li>
+        <% }); %>
+      </ul>
+    </div>
+    <% } %>
+    <div class="input-box">
+      <input
+        type="text"
+        name="nama"
+        id="nama"
+        placeholder="Nama"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="input-box">
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Email"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="input-box">
+      <input
+        type="text"
+        name="noHP"
+        id="contact"
+        placeholder="Nomor HP"
+        autocomplete="off"
+      />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

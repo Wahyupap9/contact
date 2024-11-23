@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="css/style-contact.css" />
+<h1>Data Contact</h1>
+<div class="container-contact">
+  <table border="1" cellspacing="0">
+    <tr>
+      <th class="nama">Nama</th>
+      <th class="email">Email</th>
+      <th class="noHP">NoHP</th>
+      <th>Aksi</th>
+    </tr>
+    <% contacts.forEach(contact => { %>
+    <tr>
+      <td><%- contact.nama %></td>
+      <td><%- contact.email %></td>
+      <td><%- contact.noHP %></td>
+      <td>
+        <a href="/contact/<%- contact.nama %>"><button>Detail</button></a>
+      </td>
+    </tr>
+    <% }); %>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/style-detail.css" />
+<div class="container">
+  <div class="container-detail">
+    <div class="container-data">
+      <h1><%- contact.nama %></h1>
+      <p>Email : <%- contact.email %></p>
+      <p>Nomor HP : <%- contact.noHP %></p>
+    </div>
+    <div class="container-button">
+      <a
+        href="/contact/delete/<%- contact.nama %>"
+        onclick="return confirm('sure?')"
+        ><button class="delete">Delete</button></a
+      >
+      <a href="/contact/edit/<%- contact.nama %>"
+        ><button class="edit">Edit</button></a
+      >
+    </div>
+  </div>
+</div>
+
+<button class="back-button"><a href="/contact">Back</a></button>
